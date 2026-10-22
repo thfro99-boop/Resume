@@ -1,4 +1,4 @@
-<!-- [2006.10.13 수정] 좌측 사이드바 하단의 'Key Projects 상세 열람' 배너 버튼 제거 -->
+<!-- [2006.10.13 수정] 모바일 뷰포트에서 프로필, 스펙 그리드, 포트폴리오 카드 라인 및 마진/패딩 반응형 정렬 최적화 -->
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -27,155 +27,157 @@
   </script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800&display=swap');
-    body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif; }
-    .custom-scroll::-webkit-scrollbar { width: 6px; }
+    body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif; word-break: keep-all; }
+    .custom-scroll::-webkit-scrollbar { width: 5px; }
     .custom-scroll::-webkit-scrollbar-track { background: #f1f5f9; }
     .custom-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
     .custom-scroll::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
   </style>
 </head>
-<body class="bg-[#f4f6fa] text-slate-800 min-h-screen py-10 px-4 flex items-center justify-center">
+<body class="bg-[#f4f6fa] text-slate-800 min-h-screen py-4 sm:py-8 md:py-12 px-3 sm:px-6 flex items-center justify-center">
 
   <!-- Main Card Container -->
-  <div class="w-full max-w-6xl bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-200/80 flex flex-col md:flex-row">
+  <div class="w-full max-w-6xl bg-white rounded-2xl sm:rounded-3xl shadow-xl overflow-hidden border border-slate-200/80 flex flex-col md:flex-row">
     
     <!-- Left Sidebar: About Me -->
-    <aside class="w-full md:w-80 bg-slate-50/70 p-8 border-b md:border-b-0 md:border-r border-slate-200 flex flex-col justify-start">
+    <aside class="w-full md:w-72 lg:w-80 bg-slate-50/70 p-6 sm:p-8 border-b md:border-b-0 md:border-r border-slate-200 flex flex-col justify-start shrink-0">
       <div>
         <div class="text-center">
-          <h3 class="text-xs font-bold text-slate-400 tracking-wider uppercase mb-6 flex items-center justify-center gap-1.5">
+          <h3 class="text-xs font-bold text-slate-400 tracking-wider uppercase mb-5 flex items-center justify-center gap-1.5">
             ABOUT ME
           </h3>
-          <!-- [2006.10.13 수정] 업로드된 프로필 사진(profile_soyon.jpg) 비율에 맞춰 object-top 및 둥근 프레임 핏 최적화 -->
-          <div class="w-36 h-44 mx-auto rounded-2xl overflow-hidden shadow-sm bg-slate-200 border border-slate-300 flex items-center justify-center mb-5">
+          <!-- Profile Image Wrap -->
+          <div class="w-32 h-40 sm:w-36 sm:h-44 mx-auto rounded-2xl overflow-hidden shadow-sm bg-slate-200 border border-slate-300 flex items-center justify-center mb-4">
             <img src="./profile_soyon.jpg" alt="김소연 프로필" class="w-full h-full object-cover object-top" />
           </div>
-          <h1 class="text-2xl font-extrabold text-navy-900 tracking-tight">김소연</h1>
-          <p class="text-sm font-semibold text-point mt-1">Lead UI/UX 기획자 · PM</p>
-          <div class="mt-2.5 inline-block px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-medium">
+          <h1 class="text-xl sm:text-2xl font-extrabold text-navy-900 tracking-tight">김소연</h1>
+          <p class="text-xs sm:text-sm font-semibold text-point mt-1">Lead UI/UX 기획자 · PM</p>
+          <div class="mt-2.5 inline-block px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-[11px] sm:text-xs font-medium">
             총 경력 22년 10개월 (2027.1 투입가능)
           </div>
         </div>
 
-        <!-- Contact & Info -->
-        <div class="mt-10 space-y-4 text-xs text-slate-600">
+        <!-- Contact & Info (모바일 정렬 최적화) -->
+        <div class="mt-8 sm:mt-10 space-y-3.5 text-xs text-slate-600">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-full bg-navy-900 text-white flex items-center justify-center text-xs shrink-0">
+            <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-navy-900 text-white flex items-center justify-center text-[11px] shrink-0">
               <i class="fa-solid fa-user"></i>
             </div>
-            <div>
+            <div class="min-w-0 flex-1">
               <div class="text-[10px] text-slate-400 font-medium">이름</div>
-              <div class="font-semibold text-slate-800">김소연 (KIM SOYON)</div>
+              <div class="font-semibold text-slate-800 text-xs sm:text-sm">김소연 (KIM SOYON)</div>
             </div>
           </div>
 
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-full bg-navy-900 text-white flex items-center justify-center text-xs shrink-0">
+            <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-navy-900 text-white flex items-center justify-center text-[11px] shrink-0">
               <i class="fa-solid fa-envelope"></i>
             </div>
-            <div>
+            <div class="min-w-0 flex-1">
               <div class="text-[10px] text-slate-400 font-medium">이메일</div>
-              <a href="mailto:thfro99@gmail.com" class="font-semibold text-slate-800 hover:text-point transition">thfro99@gmail.com</a>
+              <a href="mailto:thfro99@gmail.com" class="font-semibold text-slate-800 hover:text-point transition truncate block text-xs sm:text-sm">thfro99@gmail.com</a>
             </div>
           </div>
 
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-full bg-navy-900 text-white flex items-center justify-center text-xs shrink-0">
+            <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-navy-900 text-white flex items-center justify-center text-[11px] shrink-0">
               <i class="fa-solid fa-phone"></i>
             </div>
-            <div>
+            <div class="min-w-0 flex-1">
               <div class="text-[10px] text-slate-400 font-medium">연락처</div>
-              <div class="font-semibold text-slate-800">010-7474-6552</div>
+              <div class="font-semibold text-slate-800 text-xs sm:text-sm">010-7474-6552</div>
             </div>
           </div>
 
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-full bg-navy-900 text-white flex items-center justify-center text-xs shrink-0">
+            <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-navy-900 text-white flex items-center justify-center text-[11px] shrink-0">
               <i class="fa-solid fa-location-dot"></i>
             </div>
-            <div>
+            <div class="min-w-0 flex-1">
               <div class="text-[10px] text-slate-400 font-medium">위치</div>
-              <div class="font-semibold text-slate-800">경기 수원시 권선구 / 서울 전지역 협의</div>
+              <div class="font-semibold text-slate-800 text-xs sm:text-sm leading-tight">경기 수원시 권선구 / 서울 전지역 협의</div>
             </div>
           </div>
         </div>
       </div>
-      <!-- [2006.10.13 수정] 하단 상세열람 배너 버튼 제거 완료 -->
     </aside>
 
     <!-- Right Content Area -->
-    <main class="flex-1 p-8 lg:p-12 flex flex-col justify-between space-y-10">
+    <main class="flex-1 p-6 sm:p-8 md:p-10 lg:p-12 flex flex-col justify-between space-y-8 md:space-y-10 min-w-0">
       
       <!-- Top Pitching Section -->
       <div>
-        <div class="flex items-center gap-2.5 mb-3">
-          <span class="w-1.5 h-6 bg-point rounded-full"></span>
-          <h2 class="text-3xl font-black tracking-tight text-navy-900">PORTFOLIO</h2>
+        <div class="flex items-center gap-2 mb-2 sm:mb-3">
+          <span class="w-1.5 h-5 sm:h-6 bg-point rounded-full"></span>
+          <h2 class="text-2xl sm:text-3xl font-black tracking-tight text-navy-900">PORTFOLIO</h2>
         </div>
-        <h3 class="text-lg sm:text-xl font-bold text-slate-700 leading-snug">
-          기획과 운영의 깊이에 실무 추진력을 더하는, <span class="text-point underline decoration-blue-200 decoration-2 underline-offset-4">리드 기획자 & PM 김소연</span>입니다.
+        <h3 class="text-base sm:text-lg md:text-xl font-bold text-slate-800 leading-snug">
+          기획과 운영의 깊이에 실무 추진력을 더하는, <br class="hidden sm:inline" />
+          <span class="text-point underline decoration-blue-200 decoration-2 underline-offset-4">리드 기획자 & PM 김소연</span>입니다.
         </h3>
         <p class="mt-3 text-xs sm:text-sm text-slate-500 leading-relaxed max-w-3xl">
           비즈니스 정책 정의부터 복잡한 금융·공제 AX 플랫폼, 헬스케어 앱 스프린트 운영, 대형 이커머스/브랜드 채널 통합 운영까지 안정적으로 리딩해 왔습니다.
           최근에는 프롬프트 엔지니어링 및 Figma 컴포넌트 시스템을 유기적으로 결합하여 기획 산출물의 퀄리티와 프로젝트 소통 속도를 극대화하고 있습니다.
         </p>
 
-        <!-- 3 Columns Info Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 pt-8 border-t border-slate-100">
+        <!-- 3 Columns Info Grid (모바일에서 자연스러운 1열 카드 배치) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-slate-100">
           <!-- Education -->
-          <div class="space-y-1.5">
-            <div class="flex items-center gap-2 text-xs font-bold text-navy-900 mb-2">
+          <div class="space-y-1 bg-slate-50/50 md:bg-transparent p-3.5 md:p-0 rounded-xl border md:border-0 border-slate-100">
+            <div class="flex items-center gap-2 text-xs font-bold text-navy-900 mb-1.5">
               <i class="fa-solid fa-graduation-cap text-point text-sm"></i>
               <span>EDUCATION</span>
             </div>
             <div class="text-xs font-semibold text-slate-800">한국방송통신대학교</div>
             <div class="text-[11px] text-slate-500">미디어영상학과 (편입 졸업)</div>
-            <div class="text-[11px] text-slate-400 mt-1">수원과학대학 전자계산학과 졸업</div>
+            <div class="text-[11px] text-slate-400">수원과학대학 전자계산학과 졸업</div>
           </div>
 
           <!-- Skills -->
-          <div class="space-y-1.5">
-            <div class="flex items-center gap-2 text-xs font-bold text-navy-900 mb-2">
+          <div class="space-y-1 bg-slate-50/50 md:bg-transparent p-3.5 md:p-0 rounded-xl border md:border-0 border-slate-100">
+            <div class="flex items-center gap-2 text-xs font-bold text-navy-900 mb-1.5">
               <i class="fa-solid fa-star text-point text-sm"></i>
               <span>SKILLS & TOOLS</span>
             </div>
             <div class="grid grid-cols-2 gap-x-2 gap-y-1 text-xs text-slate-600">
-              <span class="flex items-center gap-1.5"><span class="w-1 h-1 rounded-full bg-slate-400"></span>Figma (UI/UX)</span>
-              <span class="flex items-center gap-1.5"><span class="w-1 h-1 rounded-full bg-slate-400"></span>AI Prompting</span>
-              <span class="flex items-center gap-1.5"><span class="w-1 h-1 rounded-full bg-slate-400"></span>Jira / Sprint 운영</span>
-              <span class="flex items-center gap-1.5"><span class="w-1 h-1 rounded-full bg-slate-400"></span>WBS & IA 설계</span>
-              <span class="flex items-center gap-1.5"><span class="w-1 h-1 rounded-full bg-slate-400"></span>HTML / CSS 기초</span>
-              <span class="flex items-center gap-1.5"><span class="w-1 h-1 rounded-full bg-slate-400"></span>운영 제안서 / PT</span>
+              <span class="flex items-center gap-1.5 truncate"><span class="w-1 h-1 rounded-full bg-slate-400 shrink-0"></span>Figma (UI/UX)</span>
+              <span class="flex items-center gap-1.5 truncate"><span class="w-1 h-1 rounded-full bg-slate-400 shrink-0"></span>AI Prompting</span>
+              <span class="flex items-center gap-1.5 truncate"><span class="w-1 h-1 rounded-full bg-slate-400 shrink-0"></span>Jira / Sprint</span>
+              <span class="flex items-center gap-1.5 truncate"><span class="w-1 h-1 rounded-full bg-slate-400 shrink-0"></span>WBS & IA 설계</span>
+              <span class="flex items-center gap-1.5 truncate"><span class="w-1 h-1 rounded-full bg-slate-400 shrink-0"></span>HTML / CSS</span>
+              <span class="flex items-center gap-1.5 truncate"><span class="w-1 h-1 rounded-full bg-slate-400 shrink-0"></span>운영 제안서 / PT</span>
             </div>
           </div>
 
           <!-- Experience Overview -->
-          <div class="space-y-1.5">
-            <div class="flex items-center gap-2 text-xs font-bold text-navy-900 mb-2">
+          <div class="space-y-1 bg-slate-50/50 md:bg-transparent p-3.5 md:p-0 rounded-xl border md:border-0 border-slate-100">
+            <div class="flex items-center gap-2 text-xs font-bold text-navy-900 mb-1.5">
               <i class="fa-solid fa-briefcase text-point text-sm"></i>
               <span>EXPERIENCE</span>
             </div>
             <div class="text-xs font-semibold text-slate-800">네티브 (NETIVE) 부장/팀장</div>
             <div class="text-[11px] text-slate-500">2015.11 ~ 2026.07 (10년 9개월)</div>
-            <div class="text-[11px] text-slate-400">키위플 / 해피라이징(야후! 꾸러기) 기획·운영</div>
+            <div class="text-[11px] text-slate-400">키위플 / 해피라이징 기획·운영</div>
           </div>
         </div>
       </div>
 
       <!-- Bottom Portfolio Highlights -->
-      <div class="bg-slate-50/80 rounded-2xl p-6 border border-slate-200/70">
-        <div class="flex items-center justify-between mb-4">
+      <div class="bg-slate-50/80 rounded-2xl p-4 sm:p-6 border border-slate-200/70">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-4">
           <h4 class="text-xs font-extrabold text-navy-900 tracking-wider uppercase">
-            PORTFOLIO HIGHLIGHTS <span class="text-[11px] font-normal text-slate-400 ml-1">(카드를 클릭하면 상세 기획서 및 운영 내역을 보실 수 있습니다)</span>
+            PORTFOLIO HIGHLIGHTS
           </h4>
+          <span class="text-[11px] font-normal text-slate-400">(카드를 터치하면 상세 기획서를 보실 수 있습니다)</span>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- 모바일 1열, 태블릿 2열, PC 4열 그리드 최적화 -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4">
           
           <!-- Card 1: 건설공제조합 -->
           <div onclick="openModal('cg')" class="group cursor-pointer bg-white rounded-xl p-3.5 border border-slate-200 hover:border-point hover:shadow-md transition duration-200 flex flex-col justify-between">
             <div>
-              <div class="w-full h-28 rounded-lg overflow-hidden mb-3 bg-slate-100 border border-slate-200/90 relative">
+              <div class="w-full h-32 sm:h-28 rounded-lg overflow-hidden mb-3 bg-slate-100 border border-slate-200/90 relative">
                 <div class="h-4 bg-slate-100 border-b border-slate-200/80 px-2 flex items-center gap-1">
                   <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
                   <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
@@ -197,7 +199,7 @@
           <!-- Card 2: 라이나원 -->
           <div onclick="openModal('lina')" class="group cursor-pointer bg-white rounded-xl p-3.5 border border-slate-200 hover:border-point hover:shadow-md transition duration-200 flex flex-col justify-between">
             <div>
-              <div class="w-full h-28 rounded-lg overflow-hidden mb-3 bg-slate-100 border border-slate-200/90 relative">
+              <div class="w-full h-32 sm:h-28 rounded-lg overflow-hidden mb-3 bg-slate-100 border border-slate-200/90 relative">
                 <div class="h-4 bg-slate-100 border-b border-slate-200/80 px-2 flex items-center gap-1">
                   <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
                   <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
@@ -219,7 +221,7 @@
           <!-- Card 3: KB헬스케어 -->
           <div onclick="openModal('ocare')" class="group cursor-pointer bg-white rounded-xl p-3.5 border border-slate-200 hover:border-point hover:shadow-md transition duration-200 flex flex-col justify-between">
             <div>
-              <div class="w-full h-28 rounded-lg overflow-hidden mb-3 bg-slate-100 border border-slate-200/90 relative">
+              <div class="w-full h-32 sm:h-28 rounded-lg overflow-hidden mb-3 bg-slate-100 border border-slate-200/90 relative">
                 <div class="h-4 bg-slate-100 border-b border-slate-200/80 px-2 flex items-center gap-1">
                   <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
                   <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
@@ -241,7 +243,7 @@
           <!-- Card 4: 한국암웨이 -->
           <div onclick="openModal('amway')" class="group cursor-pointer bg-white rounded-xl p-3.5 border border-slate-200 hover:border-point hover:shadow-md transition duration-200 flex flex-col justify-between">
             <div>
-              <div class="w-full h-28 rounded-lg overflow-hidden mb-3 bg-slate-100 border border-slate-200/90 relative">
+              <div class="w-full h-32 sm:h-28 rounded-lg overflow-hidden mb-3 bg-slate-100 border border-slate-200/90 relative">
                 <div class="h-4 bg-slate-100 border-b border-slate-200/80 px-2 flex items-center gap-1">
                   <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
                   <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
@@ -252,7 +254,7 @@
                 </div>
               </div>
               <div class="text-[10px] font-bold text-point mb-1">04. 디지털 채널 통합 운영 총괄</div>
-              <h5 class="text-xs font-bold text-slate-800 group-hover:text-point transition leading-snug">한국암웨이 디지털 채널 & 쇼핑몰 운영 총괄</h5>
+              <h5 class="text-xs font-bold text-slate-800 group-hover:text-point transition leading-snug">한국암웨이 디지털 채널 운영 총괄</h5>
               <p class="text-[11px] text-slate-400 mt-1 line-clamp-2">쇼핑몰·6개 브랜드 사이트·UMS 통합 운영 및 연간 재계약 제안 수주 리딩</p>
             </div>
             <div class="mt-3">
@@ -264,8 +266,8 @@
       </div>
 
       <!-- Bottom Quote / Slogan -->
-      <div class="text-center pt-2">
-        <p class="text-xs text-slate-400 font-medium italic">
+      <div class="text-center pt-1 pb-2">
+        <p class="text-[11px] sm:text-xs text-slate-400 font-medium italic">
           “사용자의 눈높이에서 본질적인 문제를 찾고, 정밀한 기획과 최적의 생산성으로 가치를 구현합니다.”
         </p>
       </div>
@@ -273,75 +275,75 @@
     </main>
   </div>
 
-  <!-- Detailed Modal Component -->
-  <div id="projectModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
-    <div class="bg-white w-full max-w-3xl rounded-3xl shadow-2xl overflow-hidden border border-slate-200 flex flex-col max-h-[88vh]">
+  <!-- Detailed Modal Component (모바일 풀스크린 핏 최적화) -->
+  <div id="projectModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-3 sm:p-4 hidden">
+    <div class="bg-white w-full max-w-3xl rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden border border-slate-200 flex flex-col max-h-[92vh] sm:max-h-[88vh]">
       
       <!-- Modal Top Bar -->
-      <div class="px-7 py-5 border-b border-slate-100 flex items-center justify-between bg-slate-50/70 shrink-0">
-        <div class="flex items-center gap-2.5">
-          <span id="modalBadge" class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-blue-100 text-point">카테고리</span>
-          <span class="text-xs text-slate-400" id="modalPeriod">기간</span>
+      <div class="px-5 sm:px-7 py-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/70 shrink-0">
+        <div class="flex items-center gap-2">
+          <span id="modalBadge" class="px-2 py-0.5 rounded-full text-[10px] sm:text-[11px] font-bold bg-blue-100 text-point">카테고리</span>
+          <span class="text-[11px] sm:text-xs text-slate-400" id="modalPeriod">기간</span>
         </div>
-        <button onclick="closeModal()" class="text-slate-400 hover:text-slate-700 text-lg p-1 transition">
+        <button onclick="closeModal()" class="text-slate-400 hover:text-slate-700 text-xl p-1.5 transition">
           <i class="fa-solid fa-xmark"></i>
         </button>
       </div>
 
       <!-- Modal Body -->
-      <div class="p-7 space-y-6 text-xs text-slate-600 leading-relaxed overflow-y-auto custom-scroll">
+      <div class="p-5 sm:p-7 space-y-5 sm:space-y-6 text-xs text-slate-600 leading-relaxed overflow-y-auto custom-scroll">
         
         <div>
-          <h3 id="modalTitle" class="text-xl font-extrabold text-slate-900">프로젝트명</h3>
-          <p id="modalSubtitle" class="text-xs text-slate-500 mt-1 font-medium"></p>
+          <h3 id="modalTitle" class="text-lg sm:text-xl font-extrabold text-slate-900 leading-snug">프로젝트명</h3>
+          <p id="modalSubtitle" class="text-[11px] sm:text-xs text-slate-500 mt-1 font-medium"></p>
         </div>
 
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 p-4 rounded-2xl bg-slate-50 border border-slate-100 text-[11px]">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-slate-50 border border-slate-100 text-[11px]">
           <div>
-            <span class="text-slate-400 block mb-0.5">역할 (Role)</span>
+            <span class="text-slate-400 block mb-0.5 text-[10px]">역할</span>
             <span id="modalMetaRole" class="font-bold text-slate-800"></span>
           </div>
           <div>
-            <span class="text-slate-400 block mb-0.5">클라이언트 (Client)</span>
+            <span class="text-slate-400 block mb-0.5 text-[10px]">클라이언트</span>
             <span id="modalMetaClient" class="font-bold text-slate-800"></span>
           </div>
           <div>
-            <span class="text-slate-400 block mb-0.5">투입 기간 (Period)</span>
+            <span class="text-slate-400 block mb-0.5 text-[10px]">투입 기간</span>
             <span id="modalMetaPeriod" class="font-bold text-slate-800"></span>
           </div>
           <div>
-            <span class="text-slate-400 block mb-0.5">주요 산출물 (Output)</span>
+            <span class="text-slate-400 block mb-0.5 text-[10px]">주요 산출물</span>
             <span id="modalMetaOutput" class="font-bold text-slate-800"></span>
           </div>
         </div>
 
         <div>
-          <h4 class="font-extrabold text-slate-900 text-xs mb-2 flex items-center gap-2">
-            <span class="w-1.5 h-3.5 bg-point rounded-full"></span>
+          <h4 class="font-extrabold text-slate-900 text-xs mb-1.5 flex items-center gap-2">
+            <span class="w-1.5 h-3 bg-point rounded-full"></span>
             프로젝트 개요 및 배경
           </h4>
           <p id="modalOverview" class="text-slate-600 pl-3 leading-relaxed bg-white border-l-2 border-slate-200 py-1"></p>
         </div>
 
         <div>
-          <h4 class="font-extrabold text-slate-900 text-xs mb-2 flex items-center gap-2">
-            <span class="w-1.5 h-3.5 bg-point rounded-full"></span>
+          <h4 class="font-extrabold text-slate-900 text-xs mb-1.5 flex items-center gap-2">
+            <span class="w-1.5 h-3 bg-point rounded-full"></span>
             주요 수행 업무 및 상세 역할
           </h4>
           <div id="modalTasks" class="space-y-1.5 pl-3"></div>
         </div>
 
         <div>
-          <h4 class="font-extrabold text-slate-900 text-xs mb-2 flex items-center gap-2">
-            <span class="w-1.5 h-3.5 bg-point rounded-full"></span>
+          <h4 class="font-extrabold text-slate-900 text-xs mb-1.5 flex items-center gap-2">
+            <span class="w-1.5 h-3 bg-point rounded-full"></span>
             주요 성과 및 가치 창출
           </h4>
           <div id="modalOutcomes" class="space-y-1.5 pl-3"></div>
         </div>
 
         <div>
-          <h4 class="font-extrabold text-slate-900 text-xs mb-2 flex items-center gap-2">
-            <span class="w-1.5 h-3.5 bg-point rounded-full"></span>
+          <h4 class="font-extrabold text-slate-900 text-xs mb-1.5 flex items-center gap-2">
+            <span class="w-1.5 h-3 bg-point rounded-full"></span>
             활용 툴 및 키워드
           </h4>
           <div id="modalTags" class="flex flex-wrap gap-1.5 pl-3 pt-1"></div>
@@ -349,9 +351,9 @@
       </div>
 
       <!-- Modal Footer -->
-      <div class="px-7 py-4 border-t border-slate-100 bg-slate-50 flex items-center justify-between shrink-0">
-        <span class="text-[11px] text-slate-400">김소연 리드 기획자 포트폴리오</span>
-        <button onclick="closeModal()" class="px-5 py-2 rounded-xl bg-slate-900 text-white text-xs font-semibold hover:bg-slate-800 transition">
+      <div class="px-5 sm:px-7 py-3.5 border-t border-slate-100 bg-slate-50 flex items-center justify-between shrink-0">
+        <span class="text-[10px] sm:text-[11px] text-slate-400">김소연 리드 기획자 포트폴리오</span>
+        <button onclick="closeModal()" class="px-4 py-1.5 rounded-lg bg-slate-900 text-white text-xs font-semibold hover:bg-slate-800 transition">
           닫기
         </button>
       </div>
@@ -468,7 +470,7 @@
       data.tasks.forEach(task => {
         const p = document.createElement('p');
         p.className = 'flex items-start gap-2';
-        p.innerHTML = `<span class="text-point font-bold">•</span><span>${task}</span>`;
+        p.innerHTML = `<span class="text-point font-bold shrink-0">•</span><span>${task}</span>`;
         tasksContainer.appendChild(p);
       });
 
@@ -477,7 +479,7 @@
       data.outcomes.forEach(outcome => {
         const p = document.createElement('p');
         p.className = 'flex items-start gap-2';
-        p.innerHTML = `<span class="text-emerald-500 font-bold">✔</span><span>${outcome}</span>`;
+        p.innerHTML = `<span class="text-emerald-500 font-bold shrink-0">✔</span><span>${outcome}</span>`;
         outcomesContainer.appendChild(p);
       });
 
@@ -485,7 +487,7 @@
       tagsContainer.innerHTML = '';
       data.tags.forEach(tag => {
         const span = document.createElement('span');
-        span.className = 'px-2.5 py-1 bg-slate-100 text-slate-700 rounded-lg text-[11px] font-medium border border-slate-200/60';
+        span.className = 'px-2 py-0.5 bg-slate-100 text-slate-700 rounded-md text-[10px] sm:text-[11px] font-medium border border-slate-200/60';
         span.textContent = tag;
         tagsContainer.appendChild(span);
       });
