@@ -1,0 +1,505 @@
+<!-- [2006.10.13 수정] 좌측 사이드바 하단의 'Key Projects 상세 열람' 배너 버튼 제거 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>김소연 | UI/UX 기획자 & PM 포트폴리오</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              800: '#1e293b',
+              900: '#0f172a',
+              950: '#0a0f1d',
+            },
+            point: '#2563eb'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800&display=swap');
+    body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif; }
+    .custom-scroll::-webkit-scrollbar { width: 6px; }
+    .custom-scroll::-webkit-scrollbar-track { background: #f1f5f9; }
+    .custom-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+    .custom-scroll::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+  </style>
+</head>
+<body class="bg-[#f4f6fa] text-slate-800 min-h-screen py-10 px-4 flex items-center justify-center">
+
+  <!-- Main Card Container -->
+  <div class="w-full max-w-6xl bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-200/80 flex flex-col md:flex-row">
+    
+    <!-- Left Sidebar: About Me -->
+    <aside class="w-full md:w-80 bg-slate-50/70 p-8 border-b md:border-b-0 md:border-r border-slate-200 flex flex-col justify-start">
+      <div>
+        <div class="text-center">
+          <h3 class="text-xs font-bold text-slate-400 tracking-wider uppercase mb-6 flex items-center justify-center gap-1.5">
+            ABOUT ME
+          </h3>
+          <!-- [2006.10.13 수정] 업로드된 프로필 사진(profile_soyon.jpg) 비율에 맞춰 object-top 및 둥근 프레임 핏 최적화 -->
+          <div class="w-36 h-44 mx-auto rounded-2xl overflow-hidden shadow-sm bg-slate-200 border border-slate-300 flex items-center justify-center mb-5">
+            <img src="./profile_soyon.jpg" alt="김소연 프로필" class="w-full h-full object-cover object-top" />
+          </div>
+          <h1 class="text-2xl font-extrabold text-navy-900 tracking-tight">김소연</h1>
+          <p class="text-sm font-semibold text-point mt-1">Lead UI/UX 기획자 · PM</p>
+          <div class="mt-2.5 inline-block px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-medium">
+            총 경력 22년 10개월 (2027.1 투입가능)
+          </div>
+        </div>
+
+        <!-- Contact & Info -->
+        <div class="mt-10 space-y-4 text-xs text-slate-600">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-navy-900 text-white flex items-center justify-center text-xs shrink-0">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div>
+              <div class="text-[10px] text-slate-400 font-medium">이름</div>
+              <div class="font-semibold text-slate-800">김소연 (KIM SOYON)</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-navy-900 text-white flex items-center justify-center text-xs shrink-0">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div>
+              <div class="text-[10px] text-slate-400 font-medium">이메일</div>
+              <a href="mailto:thfro99@gmail.com" class="font-semibold text-slate-800 hover:text-point transition">thfro99@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-navy-900 text-white flex items-center justify-center text-xs shrink-0">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div>
+              <div class="text-[10px] text-slate-400 font-medium">연락처</div>
+              <div class="font-semibold text-slate-800">010-7474-6552</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-navy-900 text-white flex items-center justify-center text-xs shrink-0">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div>
+              <div class="text-[10px] text-slate-400 font-medium">위치</div>
+              <div class="font-semibold text-slate-800">경기 수원시 권선구 / 서울 전지역 협의</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- [2006.10.13 수정] 하단 상세열람 배너 버튼 제거 완료 -->
+    </aside>
+
+    <!-- Right Content Area -->
+    <main class="flex-1 p-8 lg:p-12 flex flex-col justify-between space-y-10">
+      
+      <!-- Top Pitching Section -->
+      <div>
+        <div class="flex items-center gap-2.5 mb-3">
+          <span class="w-1.5 h-6 bg-point rounded-full"></span>
+          <h2 class="text-3xl font-black tracking-tight text-navy-900">PORTFOLIO</h2>
+        </div>
+        <h3 class="text-lg sm:text-xl font-bold text-slate-700 leading-snug">
+          기획과 운영의 깊이에 실무 추진력을 더하는, <span class="text-point underline decoration-blue-200 decoration-2 underline-offset-4">리드 기획자 & PM 김소연</span>입니다.
+        </h3>
+        <p class="mt-3 text-xs sm:text-sm text-slate-500 leading-relaxed max-w-3xl">
+          비즈니스 정책 정의부터 복잡한 금융·공제 AX 플랫폼, 헬스케어 앱 스프린트 운영, 대형 이커머스/브랜드 채널 통합 운영까지 안정적으로 리딩해 왔습니다.
+          최근에는 프롬프트 엔지니어링 및 Figma 컴포넌트 시스템을 유기적으로 결합하여 기획 산출물의 퀄리티와 프로젝트 소통 속도를 극대화하고 있습니다.
+        </p>
+
+        <!-- 3 Columns Info Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 pt-8 border-t border-slate-100">
+          <!-- Education -->
+          <div class="space-y-1.5">
+            <div class="flex items-center gap-2 text-xs font-bold text-navy-900 mb-2">
+              <i class="fa-solid fa-graduation-cap text-point text-sm"></i>
+              <span>EDUCATION</span>
+            </div>
+            <div class="text-xs font-semibold text-slate-800">한국방송통신대학교</div>
+            <div class="text-[11px] text-slate-500">미디어영상학과 (편입 졸업)</div>
+            <div class="text-[11px] text-slate-400 mt-1">수원과학대학 전자계산학과 졸업</div>
+          </div>
+
+          <!-- Skills -->
+          <div class="space-y-1.5">
+            <div class="flex items-center gap-2 text-xs font-bold text-navy-900 mb-2">
+              <i class="fa-solid fa-star text-point text-sm"></i>
+              <span>SKILLS & TOOLS</span>
+            </div>
+            <div class="grid grid-cols-2 gap-x-2 gap-y-1 text-xs text-slate-600">
+              <span class="flex items-center gap-1.5"><span class="w-1 h-1 rounded-full bg-slate-400"></span>Figma (UI/UX)</span>
+              <span class="flex items-center gap-1.5"><span class="w-1 h-1 rounded-full bg-slate-400"></span>AI Prompting</span>
+              <span class="flex items-center gap-1.5"><span class="w-1 h-1 rounded-full bg-slate-400"></span>Jira / Sprint 운영</span>
+              <span class="flex items-center gap-1.5"><span class="w-1 h-1 rounded-full bg-slate-400"></span>WBS & IA 설계</span>
+              <span class="flex items-center gap-1.5"><span class="w-1 h-1 rounded-full bg-slate-400"></span>HTML / CSS 기초</span>
+              <span class="flex items-center gap-1.5"><span class="w-1 h-1 rounded-full bg-slate-400"></span>운영 제안서 / PT</span>
+            </div>
+          </div>
+
+          <!-- Experience Overview -->
+          <div class="space-y-1.5">
+            <div class="flex items-center gap-2 text-xs font-bold text-navy-900 mb-2">
+              <i class="fa-solid fa-briefcase text-point text-sm"></i>
+              <span>EXPERIENCE</span>
+            </div>
+            <div class="text-xs font-semibold text-slate-800">네티브 (NETIVE) 부장/팀장</div>
+            <div class="text-[11px] text-slate-500">2015.11 ~ 2026.07 (10년 9개월)</div>
+            <div class="text-[11px] text-slate-400">키위플 / 해피라이징(야후! 꾸러기) 기획·운영</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Portfolio Highlights -->
+      <div class="bg-slate-50/80 rounded-2xl p-6 border border-slate-200/70">
+        <div class="flex items-center justify-between mb-4">
+          <h4 class="text-xs font-extrabold text-navy-900 tracking-wider uppercase">
+            PORTFOLIO HIGHLIGHTS <span class="text-[11px] font-normal text-slate-400 ml-1">(카드를 클릭하면 상세 기획서 및 운영 내역을 보실 수 있습니다)</span>
+          </h4>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          
+          <!-- Card 1: 건설공제조합 -->
+          <div onclick="openModal('cg')" class="group cursor-pointer bg-white rounded-xl p-3.5 border border-slate-200 hover:border-point hover:shadow-md transition duration-200 flex flex-col justify-between">
+            <div>
+              <div class="w-full h-28 rounded-lg overflow-hidden mb-3 bg-slate-100 border border-slate-200/90 relative">
+                <div class="h-4 bg-slate-100 border-b border-slate-200/80 px-2 flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+                  <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+                  <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+                </div>
+                <div class="h-[calc(100%-16px)] overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="건설공제조합 건공이 프리뷰" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+                </div>
+              </div>
+              <div class="text-[10px] font-bold text-point mb-1">01. AX 업무혁신 & 챗봇</div>
+              <h5 class="text-xs font-bold text-slate-800 group-hover:text-point transition leading-snug">건설공제조합 AI챗봇 '건공이'</h5>
+              <p class="text-[11px] text-slate-400 mt-1 line-clamp-2">대화형 인터페이스 및 보증·공제 신청 동선 최적화 상세 설계</p>
+            </div>
+            <div class="mt-3">
+              <span class="inline-block px-2 py-0.5 rounded text-[10px] bg-slate-100 text-slate-600 font-medium">UI/UX 리드 기획</span>
+            </div>
+          </div>
+
+          <!-- Card 2: 라이나원 -->
+          <div onclick="openModal('lina')" class="group cursor-pointer bg-white rounded-xl p-3.5 border border-slate-200 hover:border-point hover:shadow-md transition duration-200 flex flex-col justify-between">
+            <div>
+              <div class="w-full h-28 rounded-lg overflow-hidden mb-3 bg-slate-100 border border-slate-200/90 relative">
+                <div class="h-4 bg-slate-100 border-b border-slate-200/80 px-2 flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+                  <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+                  <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+                </div>
+                <div class="h-[calc(100%-16px)] overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="라이나원 TMR 프리뷰" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+                </div>
+              </div>
+              <div class="text-[10px] font-bold text-point mb-1">02. 리쿠르팅 플랫폼</div>
+              <h5 class="text-xs font-bold text-slate-800 group-hover:text-point transition leading-snug">라이나원 TMR 채용 플랫폼</h5>
+              <p class="text-[11px] text-slate-400 mt-1 line-clamp-2">총괄 PM 수행 및 AI 기반 IA/PRD 작성으로 생산성 1.5배 개선</p>
+            </div>
+            <div class="mt-3">
+              <span class="inline-block px-2 py-0.5 rounded text-[10px] bg-slate-100 text-slate-600 font-medium">총괄 PM</span>
+            </div>
+          </div>
+
+          <!-- Card 3: KB헬스케어 -->
+          <div onclick="openModal('ocare')" class="group cursor-pointer bg-white rounded-xl p-3.5 border border-slate-200 hover:border-point hover:shadow-md transition duration-200 flex flex-col justify-between">
+            <div>
+              <div class="w-full h-28 rounded-lg overflow-hidden mb-3 bg-slate-100 border border-slate-200/90 relative">
+                <div class="h-4 bg-slate-100 border-b border-slate-200/80 px-2 flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+                  <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+                  <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+                </div>
+                <div class="h-[calc(100%-16px)] overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80" alt="KB헬스케어 오케어 프리뷰" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+                </div>
+              </div>
+              <div class="text-[10px] font-bold text-point mb-1">03. 헬스케어 앱 운영 PM</div>
+              <h5 class="text-xs font-bold text-slate-800 group-hover:text-point transition leading-snug">KB헬스케어 오케어 UI/UX 운영</h5>
+              <p class="text-[11px] text-slate-400 mt-1 line-clamp-2">오케어 앱 서비스 운영 총괄, 신규 프론트 및 어드민 기획, Jira 스프린트 조율</p>
+            </div>
+            <div class="mt-3">
+              <span class="inline-block px-2 py-0.5 rounded text-[10px] bg-slate-100 text-slate-600 font-medium">UI/UX 운영 PM</span>
+            </div>
+          </div>
+
+          <!-- Card 4: 한국암웨이 -->
+          <div onclick="openModal('amway')" class="group cursor-pointer bg-white rounded-xl p-3.5 border border-slate-200 hover:border-point hover:shadow-md transition duration-200 flex flex-col justify-between">
+            <div>
+              <div class="w-full h-28 rounded-lg overflow-hidden mb-3 bg-slate-100 border border-slate-200/90 relative">
+                <div class="h-4 bg-slate-100 border-b border-slate-200/80 px-2 flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+                  <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+                  <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+                </div>
+                <div class="h-[calc(100%-16px)] overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80" alt="한국암웨이 디지털 채널 프리뷰" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+                </div>
+              </div>
+              <div class="text-[10px] font-bold text-point mb-1">04. 디지털 채널 통합 운영 총괄</div>
+              <h5 class="text-xs font-bold text-slate-800 group-hover:text-point transition leading-snug">한국암웨이 디지털 채널 & 쇼핑몰 운영 총괄</h5>
+              <p class="text-[11px] text-slate-400 mt-1 line-clamp-2">쇼핑몰·6개 브랜드 사이트·UMS 통합 운영 및 연간 재계약 제안 수주 리딩</p>
+            </div>
+            <div class="mt-3">
+              <span class="inline-block px-2 py-0.5 rounded text-[10px] bg-slate-100 text-slate-600 font-medium">운영 총괄 PM</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Bottom Quote / Slogan -->
+      <div class="text-center pt-2">
+        <p class="text-xs text-slate-400 font-medium italic">
+          “사용자의 눈높이에서 본질적인 문제를 찾고, 정밀한 기획과 최적의 생산성으로 가치를 구현합니다.”
+        </p>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Detailed Modal Component -->
+  <div id="projectModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-white w-full max-w-3xl rounded-3xl shadow-2xl overflow-hidden border border-slate-200 flex flex-col max-h-[88vh]">
+      
+      <!-- Modal Top Bar -->
+      <div class="px-7 py-5 border-b border-slate-100 flex items-center justify-between bg-slate-50/70 shrink-0">
+        <div class="flex items-center gap-2.5">
+          <span id="modalBadge" class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-blue-100 text-point">카테고리</span>
+          <span class="text-xs text-slate-400" id="modalPeriod">기간</span>
+        </div>
+        <button onclick="closeModal()" class="text-slate-400 hover:text-slate-700 text-lg p-1 transition">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-7 space-y-6 text-xs text-slate-600 leading-relaxed overflow-y-auto custom-scroll">
+        
+        <div>
+          <h3 id="modalTitle" class="text-xl font-extrabold text-slate-900">프로젝트명</h3>
+          <p id="modalSubtitle" class="text-xs text-slate-500 mt-1 font-medium"></p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 p-4 rounded-2xl bg-slate-50 border border-slate-100 text-[11px]">
+          <div>
+            <span class="text-slate-400 block mb-0.5">역할 (Role)</span>
+            <span id="modalMetaRole" class="font-bold text-slate-800"></span>
+          </div>
+          <div>
+            <span class="text-slate-400 block mb-0.5">클라이언트 (Client)</span>
+            <span id="modalMetaClient" class="font-bold text-slate-800"></span>
+          </div>
+          <div>
+            <span class="text-slate-400 block mb-0.5">투입 기간 (Period)</span>
+            <span id="modalMetaPeriod" class="font-bold text-slate-800"></span>
+          </div>
+          <div>
+            <span class="text-slate-400 block mb-0.5">주요 산출물 (Output)</span>
+            <span id="modalMetaOutput" class="font-bold text-slate-800"></span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-extrabold text-slate-900 text-xs mb-2 flex items-center gap-2">
+            <span class="w-1.5 h-3.5 bg-point rounded-full"></span>
+            프로젝트 개요 및 배경
+          </h4>
+          <p id="modalOverview" class="text-slate-600 pl-3 leading-relaxed bg-white border-l-2 border-slate-200 py-1"></p>
+        </div>
+
+        <div>
+          <h4 class="font-extrabold text-slate-900 text-xs mb-2 flex items-center gap-2">
+            <span class="w-1.5 h-3.5 bg-point rounded-full"></span>
+            주요 수행 업무 및 상세 역할
+          </h4>
+          <div id="modalTasks" class="space-y-1.5 pl-3"></div>
+        </div>
+
+        <div>
+          <h4 class="font-extrabold text-slate-900 text-xs mb-2 flex items-center gap-2">
+            <span class="w-1.5 h-3.5 bg-point rounded-full"></span>
+            주요 성과 및 가치 창출
+          </h4>
+          <div id="modalOutcomes" class="space-y-1.5 pl-3"></div>
+        </div>
+
+        <div>
+          <h4 class="font-extrabold text-slate-900 text-xs mb-2 flex items-center gap-2">
+            <span class="w-1.5 h-3.5 bg-point rounded-full"></span>
+            활용 툴 및 키워드
+          </h4>
+          <div id="modalTags" class="flex flex-wrap gap-1.5 pl-3 pt-1"></div>
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="px-7 py-4 border-t border-slate-100 bg-slate-50 flex items-center justify-between shrink-0">
+        <span class="text-[11px] text-slate-400">김소연 리드 기획자 포트폴리오</span>
+        <button onclick="closeModal()" class="px-5 py-2 rounded-xl bg-slate-900 text-white text-xs font-semibold hover:bg-slate-800 transition">
+          닫기
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    const projectDetails = {
+      cg: {
+        title: "건설공제조합 CG AX 업무혁신 플랫폼 & AI챗봇 '건공이'",
+        subtitle: "공제·보증 업무의 디지털 대전환(AX)을 위한 챗봇 UI/UX 리드 기획",
+        badge: "AI / 금융공제",
+        period: "2026.06 ~ 2026.10",
+        client: "건설공제조합",
+        role: "UI/UX 리드 기획자",
+        output: "스토리보드(SB), IA, 컴포넌트",
+        overview: "조합원들이 이용하는 복잡한 보증 및 공제 신청 업무 절차를 생성형 AI 기반 대화형 인터페이스(건공이)로 대폭 혁신하고, 사용자 진입 장벽을 낮추기 위해 추진된 핵심 AX 프로젝트입니다.",
+        tasks: [
+          "AI 챗봇 '건공이' 서비스의 전반적인 UI/UX 흐름 및 인터랙션 상세 화면설계(SB) 리드",
+          "시나리오별 빠른 실행 메뉴(퀵버튼), 폴백(Fallback) 및 예외 상황 처리 UX 동선 최적화",
+          "복잡하고 어려운 공제·보증 신청 서식을 대화형 입력 폼과 단계별 가이드 형태로 단순화",
+          "디자인 및 프론트엔드 개발팀과의 긴밀한 소통을 위한 Figma 컴포넌트 규격화 및 핸드오프 진행"
+        ],
+        outcomes: [
+          "보증·공제 신청 접근 단계를 획기적으로 압축하여 조합원 셀프 업무 처리 편의성 극대화",
+          "챗봇 이탈률을 방어하는 폴백 로직을 정밀하게 설계하여 고객 문의 응대 효율성 향상"
+        ],
+        tags: ["AI Chatbot UX", "건설공제조합", "Figma", "화면설계(SB)", "예외 케이스 처리", "보증/공제 금융"]
+      },
+      lina: {
+        title: "라이나원 TMR 리쿠르팅 플랫폼 구축",
+        subtitle: "TMR 채용 전 과정을 아우르는 반응형 웹 및 백오피스 어드민 구축 총괄",
+        badge: "총괄 PM / 채용플랫폼",
+        period: "2026.01 ~ 2026.05",
+        client: "라이나원 (LINA ONE)",
+        role: "총괄 PM & 서비스 기획",
+        output: "WBS, IA, PRD, 인터뷰/배너 어드민",
+        overview: "라이나원 텔레마케터(TMR) 채용 지원자 모집부터 인터뷰 관리, 지역별 노출, 성향 테스트, 배너 관리까지 원스톱으로 처리하는 신규 리쿠르팅 플랫폼을 턴키 구축한 프로젝트입니다.",
+        tasks: [
+          "총괄 PM으로서 프로젝트 킥오프, WBS 공정 일정 관리, 고객사 요구사항 협의 총괄",
+          "TMR 채용 랜딩페이지(라이나Go)와 백오피스 어드민(인터뷰, 지역, 배너, 유입 분석) 화면설계",
+          "LLM 프롬프트를 기획 파이프라인에 적극 도입하여 요구사항 정의서(PRD) 및 IA를 고속 수립",
+          "Figma 프로토타이핑을 통해 기획 단계에서 지원자 및 관리자 인터랙션 로직 사전 검증"
+        ],
+        outcomes: [
+          "AI 프롬프트 워크플로우 도입으로 기획 산출물 도출 속도 1.5배 단축 및 일정 100% 준수",
+          "채용 지원 전환율 증대를 위한 직관적인 모바일 친화 인터페이스 성공적 안착"
+        ],
+        tags: ["총괄 PM", "라이나원", "WBS & IA", "PRD 작성", "어드민 기획", "Figma Prototyping"]
+      },
+      ocare: {
+        title: "KB헬스케어 '오케어(O'Care)' 및 '올라케어' 운영 & UI/UX PM",
+        subtitle: "대규모 헬스케어 앱 서비스의 지속적인 기능 고도화 및 운영 스프린트 총괄",
+        badge: "헬스케어 / 앱 운영 PM",
+        period: "2023 ~ 2024",
+        client: "KB헬스케어",
+        role: "UI/UX 운영 PM",
+        output: "스프린트 기획서, 어드민 기능정의",
+        overview: "KB헬스케어의 대표 B2B/B2C 웰니스 플랫폼 '오케어'의 상시 운영 및 신규 비즈니스(마이헬스 개편, 건기식 연계, 챌린지, 스토어 어드민 등) 확장에 따른 프론트/백오피스 UI/UX 운영을 총괄했습니다.",
+        tasks: [
+          "오케어 앱 UI/UX 운영 PM으로서 Jira 기반 기획-디자인-퍼블리싱-개발 스프린트 공정 관리",
+          "마이헬스 GNB 개편, 건강검진 플로우 개선, 스토어 어드민 추가 등 신규 Task 화면설계 및 정책 수립",
+          "B2B2E / B2B2C 고객 가입 및 프로그램 연계 동선 최적화",
+          "유관 부서 및 외부 파트너사(현대그린푸드, 인바디 등) 연동 요구사항 조율 및 QA 프로세스 주도"
+        ],
+        outcomes: [
+          "월 단위 챌린지 및 스토어 운영 자동화 어드민 구축으로 운영팀 작업 소요 시간 대폭 절감",
+          "복잡한 건강 데이터(검진, 복약 정보 등)를 사용자 관점에서 쉽고 친근하게 시각화"
+        ],
+        tags: ["UI/UX 운영 PM", "KB헬스케어", "Jira Sprint", "앱 서비스 운영", "어드민 기획", "헬스케어 플랫폼"]
+      },
+      amway: {
+        title: "한국암웨이 디지털 채널 & 쇼핑몰 운영 총괄 PM",
+        subtitle: "쇼핑몰, 6개 브랜드 사이트, 자체 UMS 통합 운영 및 연간 재계약 수주",
+        badge: "이커머스 / 운영 총괄 PM",
+        period: "2015 ~ 2021 (장기 운영)",
+        client: "한국암웨이",
+        role: "운영 총괄 PM & 제안 리드",
+        output: "연간 운영 제안서, 정기배송 UI/UX",
+        overview: "한국암웨이의 대표 쇼핑몰(amway.co.kr), 뉴트리라이트, 아티스트리 등 6개 브랜드 채널과 자체 UMS(회원 알림/메시징 시스템), 유튜브 및 이벤트 앱을 아우르는 전체 디지털 생태계의 연간 운영 총괄 PM을 역임했습니다.",
+        tasks: [
+          "연간 디지털 채널 운영 계약 유지를 위한 운영 제안서 작성 및 수주 경쟁 프리젠테이션(PT) 총괄",
+          "한국암웨이 대표 쇼핑몰, 아카데미, 워드프레스 기반 콘텐츠 사이트(암웨이온) 상시 운영 및 유지보수",
+          "파편화되어 있던 6개 브랜드 사이트(뉴트리라이트, 아티스트리, 바디키 등)를 대표 플랫폼으로 일원화하는 통합 개편 기획",
+          "정기배송 서비스 UI/UX 신규 설계, 명절 카탈로그 온라인화, 자체 UMS 발송 시스템 운영 및 개선"
+        ],
+        outcomes: [
+          "연속적인 운영 재계약 수주(2019, 2020, 2021)를 달성하며 안정적이고 신뢰받는 파트너십 구축",
+          "단일화된 브랜딩 경험과 최적화된 정기배송 UX를 통해 온라인 주문 접근성 및 운영 효율 극대화"
+        ],
+        tags: ["운영 총괄 PM", "한국암웨이", "이커머스 운영", "제안서 작성/PT", "정기배송 UI/UX", "멀티채널 운영"]
+      }
+    };
+
+    function openModal(key) {
+      const data = projectDetails[key];
+      if (!data) return;
+
+      document.getElementById('modalTitle').textContent = data.title;
+      document.getElementById('modalSubtitle').textContent = data.subtitle;
+      document.getElementById('modalBadge').textContent = data.badge;
+      document.getElementById('modalPeriod').textContent = data.period;
+
+      document.getElementById('modalMetaRole').textContent = data.role;
+      document.getElementById('modalMetaClient').textContent = data.client;
+      document.getElementById('modalMetaPeriod').textContent = data.period;
+      document.getElementById('modalMetaOutput').textContent = data.output;
+
+      document.getElementById('modalOverview').textContent = data.overview;
+
+      const tasksContainer = document.getElementById('modalTasks');
+      tasksContainer.innerHTML = '';
+      data.tasks.forEach(task => {
+        const p = document.createElement('p');
+        p.className = 'flex items-start gap-2';
+        p.innerHTML = `<span class="text-point font-bold">•</span><span>${task}</span>`;
+        tasksContainer.appendChild(p);
+      });
+
+      const outcomesContainer = document.getElementById('modalOutcomes');
+      outcomesContainer.innerHTML = '';
+      data.outcomes.forEach(outcome => {
+        const p = document.createElement('p');
+        p.className = 'flex items-start gap-2';
+        p.innerHTML = `<span class="text-emerald-500 font-bold">✔</span><span>${outcome}</span>`;
+        outcomesContainer.appendChild(p);
+      });
+
+      const tagsContainer = document.getElementById('modalTags');
+      tagsContainer.innerHTML = '';
+      data.tags.forEach(tag => {
+        const span = document.createElement('span');
+        span.className = 'px-2.5 py-1 bg-slate-100 text-slate-700 rounded-lg text-[11px] font-medium border border-slate-200/60';
+        span.textContent = tag;
+        tagsContainer.appendChild(span);
+      });
+
+      document.getElementById('projectModal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('projectModal').classList.add('hidden');
+    }
+
+    document.getElementById('projectModal').addEventListener('click', function(e) {
+      if (e.target === this) closeModal();
+    });
+  </script>
+</body>
+</html>
