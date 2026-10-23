@@ -57,11 +57,11 @@
           <h3 class="text-xs font-bold text-slate-400 tracking-wider uppercase mb-5 flex items-center justify-center gap-1.5">
             ABOUT ME
           </h3>
-<!-- [2006.10.13 수정] 상반신 팔짱 포즈 프로필에 맞춰 너비와 세로 비율 확장 및 자연스러운 상반신 크롭 적용 -->
-<!-- Profile Image Wrap -->
-<div class="w-40 h-52 sm:w-44 sm:h-56 mx-auto rounded-2xl overflow-hidden shadow-md bg-slate-100 border border-slate-200/90 flex items-center justify-center mb-4">
-  <img src="./profile_soyon1.png" alt="김소연 프로필" class="w-full h-full object-cover object-[center_12%]" />
-</div>
+          <!-- [2006.10.13 수정] 상반신 팔짱 포즈 프로필에 맞춰 너비와 세로 비율 확장 및 자연스러운 상반신 크롭 적용 -->
+          <!-- Profile Image Wrap -->
+          <div class="w-40 h-52 sm:w-44 sm:h-56 mx-auto rounded-2xl overflow-hidden shadow-md bg-slate-100 border border-slate-200/90 flex items-center justify-center mb-4">
+            <img src="./profile_soyon1.png" alt="김소연 프로필" class="w-full h-full object-cover object-[center_12%]" />
+          </div>
           <h1 class="text-xl sm:text-2xl font-extrabold text-navy-900 tracking-tight">김소연</h1>
           <p class="text-xs sm:text-sm font-semibold text-point mt-1">Lead UI/UX 기획자 · PM</p>
           <div class="mt-2.5 inline-block px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-[11px] sm:text-xs font-medium">
@@ -129,7 +129,7 @@
         </h3>
         <p class="mt-3 text-xs sm:text-sm text-slate-500 leading-relaxed max-w-3xl">
           비즈니스 정책 정의부터 복잡한 금융·공제 AX 플랫폼, 헬스케어 앱 스프린트 운영, 대형 이커머스/브랜드 채널 통합 운영까지 안정적으로 리딩해 왔습니다.
-          최근에는 프롬프트 엔지니어링 및 Figma 컴포넌트 시스템을 유기적으로 결합하여 기획 산출물의 퀄리티와 프로젝트 소통 속도를 극대화하고 있습니다.
+          최근에는 생성형 AI 툴을 실무에 적극 활용하고, Figma 컴포넌트 시스템을 연계하여 기획 산출물의 완성도와 프로젝트 소통 속도를 높이고 있습니다.
         </p>
 
         <!-- 3 Columns Info Grid -->
@@ -374,27 +374,36 @@
 
   <script>
     const projectDetails = {
-      cg: {
-        title: "건설공제조합 CG AX 업무혁신 플랫폼 & AI챗봇 '건공이'",
-        subtitle: "공제·보증 업무의 디지털 대전환(AX)을 위한 챗봇 UI/UX 리드 기획",
-        badge: "AI / 금융공제",
-        period: "2026.06 ~ 2026.10",
-        client: "건설공제조합",
-        role: "UI/UX 리드 기획자",
-        output: "스토리보드(SB), IA, 컴포넌트",
-        overview: "조합원들이 이용하는 복잡한 보증 및 공제 신청 업무 절차를 생성형 AI 기반 대화형 인터페이스(건공이)로 대폭 혁신하고, 사용자 진입 장벽을 낮추기 위해 추진된 핵심 AX 프로젝트입니다.",
-        tasks: [
-          "AI 챗봇 '건공이' 서비스의 전반적인 UI/UX 흐름 및 인터랙션 상세 화면설계(SB) 리드",
-          "시나리오별 빠른 실행 메뉴(퀵버튼), 폴백(Fallback) 및 예외 상황 처리 UX 동선 최적화",
-          "복잡하고 어려운 공제·보증 신청 서식을 대화형 입력 폼과 단계별 가이드 형태로 단순화",
-          "디자인 및 프론트엔드 개발팀과의 긴밀한 소통을 위한 Figma 컴포넌트 규격화 및 핸드오프 진행"
-        ],
-        outcomes: [
-          "보증·공제 신청 접근 단계를 획기적으로 압축하여 조합원 셀프 업무 처리 편의성 극대화",
-          "챗봇 이탈률을 방어하는 폴백 로직을 정밀하게 설계하여 고객 문의 응대 효율성 향상"
-        ],
-        tags: ["AI Chatbot UX", "건설공제조합", "Figma", "화면설계(SB)", "예외 케이스 처리", "보증/공제 금융"]
-      },
+/* [2006.10.13 수정] 건설공제조합: 보증심사 어시스턴트 반영 및 디자인/퍼블 공백 시 AI 활용 화면 직접 구현 실무 성과로 수정 */
+cg: {
+      title: "건설공제조합 CG AX AI 챗봇('건공이') & 보증심사 어시스턴트 구축",
+      subtitle: "AI 챗봇 UI/UX 기획 및 내부 심사업무 지원 어시스턴트 화면 직접 구현",
+      badge: "AI / 보증·공제",
+      period: "2026.05 ~ 2026.10",
+      client: "건설공제조합",
+      role: "UI/UX 리드 기획자",
+      output: "스토리보드(SB), AI 화면 구현, 화면설계서",
+      overview: "건설공제조합 직원의 편의를 돕는 AI 챗봇 '건공이'와 함께, 내부 심사역의 보증 심사 업무를 효율화하는 '보증심사 어시스턴트'를 동시에 구축한 핵심 AX(AI 전환) 프로젝트입니다.",
+      tasks: [
+        "AI 챗봇 '건공이'의 사용자 동선 및 대화 시나리오 화면설계(SB) 리드",
+        "자주 묻는 질문을 빠르게 해결하는 퀵버튼과 예외 안내 흐름을 직관적으로 설계",
+        "조합 보안 정책에 맞춰 내부망·외부 LLM 활용 분기 처리 및 개인정보 유출 방지를 위한 승인 절차 동선 설계",
+        "디자인·퍼블리싱 전담 인력이 없는 환경에서 생성형 AI 도구를 능동적으로 활용해 화면 UI를 직접 설계·구현하여 전달"
+      ],
+      outcomes: [
+        "인력 공백(디자인·퍼블 부재) 상황에서도 AI를 실무에 접목해 개발 지연 없이 프로젝트 완수",
+        "심사역이 필요로 하는 정보를 최적화하여 노출함으로써 내부 보증 심사 소요 시간 단축 기여"
+      ],
+// [2006.10.13 수정] 내부/외부 LLM 분기 및 개인정보 보호 승인 프로세스 반영 키워드로 최적화
+tags: [
+  "AI Chatbot",
+  "보증심사 어시스턴트",
+  "내·외부 LLM 분기 설계",
+  "개인정보 보호/승인 프로세스",
+  "화면 직접 구현(AI)",
+  "AX 업무혁신"
+]
+    },
       lina: {
         title: "라이나원 TMR 리쿠르팅 플랫폼 구축",
         subtitle: "TMR 채용 전 과정을 아우르는 반응형 웹 및 백오피스 어드민 구축 총괄",
@@ -420,7 +429,7 @@
         title: "KB헬스케어 '오케어(O'Care)' 및 '올라케어' 운영 & UI/UX PM",
         subtitle: "대규모 헬스케어 앱 서비스의 지속적인 기능 고도화 및 운영 스프린트 총괄",
         badge: "헬스케어 / 앱 운영 PM",
-        period: "2023 ~ 2024",
+        period: "2023 ~ 2025",
         client: "KB헬스케어",
         role: "UI/UX 운영 PM",
         output: "스프린트 기획서, 어드민 기능정의",
